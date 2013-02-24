@@ -19,7 +19,9 @@ The script will also output a final time on how long this took.
 Average over ten runs (in seconds)
 
 Urxvt(-tabbed): 0.066981637
+
 Tilda:          1.558231621
+
 xfce4-terminal: 1.624136690
 
 ##### Results
@@ -29,7 +31,7 @@ I'm switching away from tilda and to urxvt.
 This takes a bit of work, so here are some related notes.
 
 ##### .xresources
-
+```
 ! fully qualified shell
 URxvt*loginShell: true
 ! these are in AUR
@@ -45,6 +47,7 @@ URxvt.depth: 32
 URxvt.background: [35]#000000
 URxvt.foreground: #ffffff
 URxvt.colorUL: #4682B4
+```
 
 ##### Compiz
 
@@ -53,6 +56,7 @@ Compiz did the bulk of the placement work (mmmmm, compiz).
 This works on my dual 1080x1920 (that's two screens rotated).
 
 This is just a dump of the various lines that I set to make urxvtq1 place nicely.
+```
 s0_position_matches = class=xbmc;class=Google-chrome;name=urxvtq1;name=urxvtq2;
 s0_position_x_values = 2161;0;0;1081;
 s0_position_y_values = 441;0;0;0;
@@ -65,7 +69,7 @@ s0_skippager_match = (class=Cairo-dock) | name=urxvtq1 | name=urxvtq2
 s0_size_matches = (class=xbmc);class=Google-chrome;name=urxvtq1;name=urxvtq2;
 s0_size_width_values = 1920;2160;1080;1080;
 s0_size_height_values = 1080;1920;1920;1920;
-
+```
 
 ##### urxvtq
 
