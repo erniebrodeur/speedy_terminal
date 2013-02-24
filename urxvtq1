@@ -1,0 +1,16 @@
+#!/bin/bash
+
+wid=$(xdotool search --classname urxvtq1)
+if [ -z "$wid" ]; then
+  urxvt -name urxvtq1
+  wid=$(xdotool search --name urxvtq1 | grep -m 1 "" )
+  xdotool windowfocus "$wid"
+  xdotool key Control_L+l
+else
+  if [ -z "$(xdotool search --onlyvisible --classname urxvtq1 2>/dev/null)" ]; then
+    xdotool windowmap "$wid"
+    xdotool windowfocus "$wid"
+  else
+    xdotool windowunmap "$wid"
+  fi
+fi
